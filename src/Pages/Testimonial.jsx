@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import img1 from '../Assests/john.jpeg';
 import img2 from '../Assests/jane.jpeg';
 import img3 from '../Assests/alex.jpg';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const testimonials = [
   {
@@ -74,8 +76,12 @@ const Testimonials = () => {
     }
   }, [activeIndex]);
 
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
-    <div className="flex justify-center items-center space-x-10 md:space-x-20 px-10 md:px-24 py-20 bg-[#f3e1f4] dark:bg-gray-900 overflow-x-auto scrollbar-hide">
+    <div className="flex justify-center items-center space-x-10 md:space-x-20 px-10 md:px-24 py-20 bg-[#f3e1f4] dark:bg-gray-900 overflow-x-auto scrollbar-hide" data-aos="fade-left">
       <div
         ref={containerRef}
         className="flex space-x-6 md:space-x-20 snap-x snap-mandatory w-96 md:w-full px-4 md:px-0"

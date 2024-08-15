@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Image from '../Assests/contact us.png';
 import toast, { Toaster } from 'react-hot-toast';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const ContactForm = () => {
+
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -34,14 +41,14 @@ const ContactForm = () => {
       <Toaster />
       <div className='md:ml-2 mt-4 lg:mt-10'>
         <div className='flex justify-center items-center'>
-          <h2 className="text-4xl md:text-6xl font-bold text-[#674188] dark:text-[#b994d9] mb-6">Get In Touch !</h2>
+          <h2 className="text-4xl md:text-6xl font-bold text-[#674188] dark:text-[#b994d9] mb-6" data-aos="flip-up">Get In Touch !</h2>
         </div>
-        <div className='mx-14 mt-16 hidden md:block'>
+        <div className='mx-14 mt-16 hidden md:block' data-aos="fade-right">
           <img src={Image} alt='image' className='md:w-96 md:h-72 lg:w-auto lg:h-96' />
         </div>
       </div>
 
-      <div className="flex justify-center items-center lg:min-h-screen m-10 ">
+      <div className="flex justify-center items-center lg:min-h-screen m-10 " data-aos="fade-left">
         <div className="w-full max-w-lg p-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -1,13 +1,18 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import ProgrammingLanguage from '../Json/Services';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Services = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <div className="bg-[#f3e1f4] dark:bg-gray-900 ">
         <div>
-            <h1 className='text-4xl font-extrabold text-[#674188] dark:text-[#b994d9] text-center'>Our Services</h1>
+            <h1 className='text-4xl font-extrabold text-[#674188] dark:text-[#b994d9] text-center'  data-aos="flip-up">Our Services</h1>
         </div>
-      <div className="flex overflow-x-scroll scrollbar-hide space-x-6 md:space-x-10 p-10 md:p-20">
+      <div className="flex overflow-x-scroll scrollbar-hide space-x-6 md:space-x-10 p-10 md:p-20"  data-aos="fade-right">
         {ProgrammingLanguage.map((ProgrammingLanguage, index) => (
           <div
             key={index}
