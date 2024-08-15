@@ -10,14 +10,14 @@ const About = () => {
             Empowering students and professionals to achieve their goals through personalized and cutting-edge educational services.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mx-4">
           <div>
             <h3 className="text-2xl font-bold text-[#674188] dark:text-[#b994d9] mb-4">Our Mission</h3>
             <p className="text-gray-600 text-xl dark:text-gray-400">
               Our mission is to provide high-quality, accessible, and flexible learning experiences that enable students and professionals to thrive in an ever-changing world. Whether you’re looking to advance your career, learn new skills, or explore new subjects, we’re here to guide you every step of the way.
             </p>
           </div>
-          <div className='hidden lg:block ml-48 border-l-2 border-black dark:border-white '>
+          <div className='hidden md:block lg:ml-48 md:ml-28 border-l-2 border-black dark:border-white '>
           </div>
           <div >
             <h3 className="text-2xl font-bold text-[#674188] dark:text-[#b994d9] mb-4">Why Choose Us?</h3>

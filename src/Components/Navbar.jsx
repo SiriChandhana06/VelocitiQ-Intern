@@ -51,7 +51,7 @@ const Navbar = () => {
           <a href="#contact" className="text-[#674188] dark:text-[#ffffff] block px-3 py-2 rounded-md text-base font-medium">Contact</a>
           <button
             onClick={toggleDarkMode}
-            className="bg-yellow-400 text-gray-800 dark:bg-gray-600 dark:text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium"
+            className="bg-[#674188] text-white hover:bg-[#371555] dark:bg-gray-600 dark:text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium"
           >
             {darkMode ? 'Light Mode' : 'Dark Mode'}
           </button>
